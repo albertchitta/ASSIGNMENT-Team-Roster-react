@@ -1,29 +1,38 @@
-import React, { useEffect, useState } from 'react';
-// import PropTypes from 'prop-types';
-import { getPlayers } from '../api/data/playerData';
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
 import Player from '../components/Player';
 
-export default function Team() {
-  const [players, setPlayers] = useState([]);
-
-  useEffect(() => {
-    let isMounted = true;
-    getPlayers('gk8kFU85zIfl21eFEbJFHJNoTZq2').then((playersArray) => {
-      if (isMounted) setPlayers(playersArray);
-    });
-    return () => {
-      isMounted = false;
-    };
-  }, [players]);
-
+const TeamStyle = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+`;
+export default function Team({ players, setPlayers, setEditPlayer }) {
   return (
-    <div>
+    <>
       <h1>TEAM</h1>
-      {players.length ? (
-        players.map((player) => <Player player={player} />)
-      ) : (
-        <h3>No Players Added</h3>
-      )}
-    </div>
+      <TeamStyle>
+        {players.length ? (
+          players.map((player) => (
+            <Player
+              key={player.firebaseKey}
+              player={player}
+              setEditPlayer={setEditPlayer}
+              setPlayers={setPlayers}
+            />
+          ))
+        ) : (
+          <h3>No Players Added</h3>
+        )}
+      </TeamStyle>
+    </>
   );
 }
+
+Team.propTypes = {
+  players: PropTypes.arrayOf(PropTypes.object).isRequired,
+  setPlayers: PropTypes.func.isRequired,
+  setEditPlayer: PropTypes.func.isRequired,
+};

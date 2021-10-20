@@ -11,6 +11,8 @@ const FormStyle = styled.div`
   border-color: gray;
   border-width: 1px;
   padding: 16px;
+  width: 644px;
+  margin: auto;
 
   Label {
     color: white;
@@ -29,7 +31,9 @@ const initialState = {
   uid: '',
 };
 
-export default function PlayerForm({ player, setPlayers, setEditPlayer }) {
+export default function PlayerForm({
+  player, setPlayers, setEditPlayer, uid,
+}) {
   const [formInput, setFormInput] = useState(initialState);
 
   useEffect(() => {
@@ -40,7 +44,7 @@ export default function PlayerForm({ player, setPlayers, setEditPlayer }) {
         firebaseKey: player.firebaseKey,
         position: player.position,
         imageUrl: player.imageUrl,
-        uid: player.uid,
+        uid,
       });
     }
   }, [player]);
@@ -157,6 +161,7 @@ PlayerForm.propTypes = {
   }),
   setPlayers: PropTypes.func.isRequired,
   setEditPlayer: PropTypes.func.isRequired,
+  uid: PropTypes.string.isRequired,
 };
 
 PlayerForm.defaultProps = { player: {} };

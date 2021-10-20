@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import PlayerForm from '../components/PlayerForm';
 
-export default function New({ player, setPlayers, setEditPlayer }) {
+export default function New({
+  player, setPlayers, setEditPlayer, uid,
+}) {
   // const [editPlayer, setEditPlayer] = useState([]);
 
   return (
@@ -12,6 +14,7 @@ export default function New({ player, setPlayers, setEditPlayer }) {
         player={player}
         setPlayers={setPlayers}
         setEditPlayer={setEditPlayer}
+        uid={uid}
       />
     </>
   );
@@ -28,6 +31,7 @@ New.propTypes = {
   }),
   setPlayers: PropTypes.func.isRequired,
   setEditPlayer: PropTypes.func.isRequired,
+  uid: PropTypes.string.isRequired,
 };
 
 New.defaultProps = { player: {} };
