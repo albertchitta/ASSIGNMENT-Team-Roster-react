@@ -1,17 +1,33 @@
-import React, { useState } from 'react';
-// import PropTypes from 'prop-types';
+import React from 'react';
+import PropTypes from 'prop-types';
 import PlayerForm from '../components/PlayerForm';
 
-export default function New() {
-  const [editPlayer, setEditPlayer] = useState([]);
+export default function New({ player, setPlayers, setEditPlayer }) {
+  // const [editPlayer, setEditPlayer] = useState([]);
 
   return (
     <>
-      <PlayerForm obj={editPlayer} setEditPlayer={setEditPlayer} />
+      <h1>Add A Player</h1>
+      <PlayerForm
+        player={player}
+        setPlayers={setPlayers}
+        setEditPlayer={setEditPlayer}
+      />
     </>
   );
 }
 
-// New.propTypes = {
-//   setPlayers: PropTypes.func.isRequired,
-// };
+New.propTypes = {
+  player: PropTypes.shape({
+    name: PropTypes.string,
+    number: PropTypes.number,
+    firebaseKey: PropTypes.string,
+    position: PropTypes.string,
+    imageUrl: PropTypes.string,
+    uid: PropTypes.string,
+  }),
+  setPlayers: PropTypes.func.isRequired,
+  setEditPlayer: PropTypes.func.isRequired,
+};
+
+New.defaultProps = { player: {} };

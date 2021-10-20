@@ -34,7 +34,7 @@ const ContainerStyle = styled.div`
 
 function Initialize() {
   const [players, setPlayers] = useState([]);
-  // const [editPlayer, setEditPlayer] = useState([]);
+  const [editPlayer, setEditPlayer] = useState({});
   const [user, setUser] = useState(null); // Need in React if a user is loading
 
   useEffect(() => {
@@ -48,7 +48,7 @@ function Initialize() {
           user: authed.email.split('@')[0],
         };
         setUser(userInfoObj);
-        getPlayers(userInfoObj.uid).then(setPlayers);
+        getPlayers().then(setPlayers);
       } else if (user || user === null) {
         setUser(false);
       }
@@ -61,7 +61,12 @@ function Initialize() {
         <>
           <Navigation />
           <h1>LOS ANGELES LAKERS</h1>
-          <Routes players={players} />
+          <Routes
+            players={players}
+            player={editPlayer}
+            setEditPlayer={setEditPlayer}
+            setPlayers={setPlayers}
+          />
         </>
       ) : (
         <SignIn user={user} />

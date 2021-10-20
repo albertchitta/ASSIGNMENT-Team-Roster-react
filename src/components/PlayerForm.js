@@ -23,25 +23,27 @@ const FormStyle = styled.div`
 
 const initialState = {
   name: '',
+  number: '',
   position: '',
   imageUrl: '',
   uid: '',
 };
 
-export default function PlayerForm({ obj, setPlayers, setEditPlayer }) {
+export default function PlayerForm({ player, setPlayers, setEditPlayer }) {
   const [formInput, setFormInput] = useState(initialState);
 
   useEffect(() => {
-    if (obj.firebaseKey) {
+    if (player.firebaseKey) {
       setFormInput({
-        name: obj.name,
-        firebaseKey: obj.firebaseKey,
-        position: obj.position,
-        imageUrl: obj.imageUrl,
-        uid: obj.uid,
+        name: player.name,
+        number: player.number,
+        firebaseKey: player.firebaseKey,
+        position: player.position,
+        imageUrl: player.imageUrl,
+        uid: player.uid,
       });
     }
-  }, [obj]);
+  }, [player]);
 
   const resetForm = () => {
     setFormInput(initialState);
@@ -57,7 +59,7 @@ export default function PlayerForm({ obj, setPlayers, setEditPlayer }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (obj.firebaseKey) {
+    if (player.firebaseKey) {
       updatePlayer(formInput).then((players) => {
         setPlayers(players);
         resetForm();
@@ -79,8 +81,22 @@ export default function PlayerForm({ obj, setPlayers, setEditPlayer }) {
             type="text"
             name="name"
             id="name"
-            placeholder="Add a player"
+            placeholder="Add a name"
             value={formInput.name}
+            onChange={handleChange}
+            required
+          />
+        </FormGroup>
+        <FormGroup>
+          <Label for="number" sm={2}>
+            Number
+          </Label>
+          <Input
+            type="text"
+            name="number"
+            id="number"
+            placeholder="Add a number"
+            value={formInput.number}
             onChange={handleChange}
             required
           />
@@ -93,7 +109,7 @@ export default function PlayerForm({ obj, setPlayers, setEditPlayer }) {
             type="text"
             name="imageUrl"
             id="imageUrl"
-            placeholder="Add a player image URL"
+            placeholder="Add an image URL"
             value={formInput.imageUrl}
             onChange={handleChange}
             required
@@ -123,7 +139,7 @@ export default function PlayerForm({ obj, setPlayers, setEditPlayer }) {
           </Input>
         </FormGroup>
         <Button type="submit" className="btn btn-success">
-          {obj.firebaseKey ? 'Update' : 'Submit'}
+          {player.firebaseKey ? 'Update' : 'Submit'}
         </Button>
       </Form>
     </FormStyle>
@@ -131,8 +147,9 @@ export default function PlayerForm({ obj, setPlayers, setEditPlayer }) {
 }
 
 PlayerForm.propTypes = {
-  obj: PropTypes.shape({
+  player: PropTypes.shape({
     name: PropTypes.string,
+    number: PropTypes.number,
     firebaseKey: PropTypes.string,
     position: PropTypes.string,
     imageUrl: PropTypes.string,
@@ -142,4 +159,4 @@ PlayerForm.propTypes = {
   setEditPlayer: PropTypes.func.isRequired,
 };
 
-PlayerForm.defaultProps = { obj: {} };
+PlayerForm.defaultProps = { player: {} };
