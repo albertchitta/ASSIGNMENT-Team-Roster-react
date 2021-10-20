@@ -9,7 +9,6 @@ import Navigation from '../components/Navigation';
 import { getPlayers } from '../api/data/playerData';
 
 const ContainerStyle = styled.div`
-  width: 644px;
   margin: auto;
   padding: 50px 0;
 
@@ -45,10 +44,9 @@ function Initialize() {
           fullName: authed.displayName,
           profileImage: authed.photoURL,
           uid: authed.uid,
-          user: authed.email.split('@')[0],
         };
         setUser(userInfoObj);
-        getPlayers().then(setPlayers);
+        getPlayers(userInfoObj.uid).then(setPlayers);
       } else if (user || user === null) {
         setUser(false);
       }
@@ -66,6 +64,7 @@ function Initialize() {
             player={editPlayer}
             setEditPlayer={setEditPlayer}
             setPlayers={setPlayers}
+            uid={firebase.auth().currentUser.uid}
           />
         </>
       ) : (
