@@ -1,0 +1,42 @@
+{
+  "-MmQQafjT-zgl8s7VqQa" : {
+    "firebaseKey" : "-MmQQafjT-zgl8s7VqQa",
+    "imageUrl" : "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/1966.png&w=350&h=254",
+    "name" : "Lebron James",
+    "number" : 6,
+    "position" : "Small Forward",
+    "uid" : ""
+  },
+  "-MmQrnn9qEp4eKani0GE" : {
+    "firebaseKey" : "-MmQrnn9qEp4eKani0GE",
+    "imageUrl" : "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3468.png&w=350&h=254",
+    "name" : "Russell Westbrook",
+    "number" : 0,
+    "position" : "Point Guard",
+    "uid" : ""
+  },
+  "-MmQtFbgyPBcNUkGe3_F" : {
+    "firebaseKey" : "-MmQtFbgyPBcNUkGe3_F",
+    "imageUrl" : "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/1975.png&w=350&h=254",
+    "name" : "Carmelo Anthony",
+    "number" : 7,
+    "position" : "Power Forward",
+    "uid" : ""
+  },
+  "-MmQu4asBTMCTHHJi5wL" : {
+    "firebaseKey" : "-MmQu4asBTMCTHHJi5wL",
+    "imageUrl" : "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6583.png&w=350&h=254",
+    "name" : "Anthony Davis",
+    "number" : 3,
+    "position" : "Power Forward",
+    "uid" : ""
+  },
+  "-MmQvpy9lUtmGxutOy3C" : {
+    "firebaseKey" : "-MmQvpy9lUtmGxutOy3C",
+    "imageUrl" : "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3026.png&w=350&h=254",
+    "name" : "Rajon Rondo",
+    "number" : 4,
+    "position" : "Point Guard",
+    "uid" : ""
+  }
+}
