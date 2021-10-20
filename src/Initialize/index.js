@@ -6,8 +6,9 @@ import firebaseConfig from '../api/apiKeys';
 import Routes from '../routes';
 import SignIn from '../views/SignIn';
 import Navigation from '../components/Navigation';
+import { getPlayers } from '../api/data/playerData';
 
-const Container = styled.div`
+const ContainerStyle = styled.div`
   width: 644px;
   margin: auto;
   padding: 50px 0;
@@ -16,6 +17,7 @@ const Container = styled.div`
     text-align: center;
     font-size: 64px;
     font-weight: normal;
+    color: white;
   }
 
   h3 {
@@ -31,6 +33,8 @@ const Container = styled.div`
 `;
 
 function Initialize() {
+  const [players, setPlayers] = useState([]);
+  // const [editPlayer, setEditPlayer] = useState([]);
   const [user, setUser] = useState(null); // Need in React if a user is loading
 
   useEffect(() => {
@@ -44,7 +48,7 @@ function Initialize() {
           user: authed.email.split('@')[0],
         };
         setUser(userInfoObj);
-        // getTeam().then(setTeam);
+        getPlayers(userInfoObj.uid).then(setPlayers);
       } else if (user || user === null) {
         setUser(false);
       }
@@ -52,17 +56,17 @@ function Initialize() {
   }, []);
 
   return (
-    <Container>
+    <ContainerStyle>
       {user ? (
         <>
           <Navigation />
           <h1>LOS ANGELES LAKERS</h1>
-          <Routes />
+          <Routes players={players} />
         </>
       ) : (
         <SignIn user={user} />
       )}
-    </Container>
+    </ContainerStyle>
   );
 }
 
