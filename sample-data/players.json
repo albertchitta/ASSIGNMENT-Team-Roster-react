@@ -5,7 +5,7 @@
     "name" : "Lebron James",
     "number" : 6,
     "position" : "Small Forward",
-    "uid" : ""
+    "uid" : "gk8kFU85zIfl21eFEbJFHJNoTZq2"
   },
   "-MmQrnn9qEp4eKani0GE" : {
     "firebaseKey" : "-MmQrnn9qEp4eKani0GE",
@@ -13,7 +13,7 @@
     "name" : "Russell Westbrook",
     "number" : 0,
     "position" : "Point Guard",
-    "uid" : ""
+    "uid" : "gk8kFU85zIfl21eFEbJFHJNoTZq2"
   },
   "-MmQtFbgyPBcNUkGe3_F" : {
     "firebaseKey" : "-MmQtFbgyPBcNUkGe3_F",
@@ -21,7 +21,7 @@
     "name" : "Carmelo Anthony",
     "number" : 7,
     "position" : "Power Forward",
-    "uid" : ""
+    "uid" : "gk8kFU85zIfl21eFEbJFHJNoTZq2"
   },
   "-MmQu4asBTMCTHHJi5wL" : {
     "firebaseKey" : "-MmQu4asBTMCTHHJi5wL",
@@ -29,7 +29,7 @@
     "name" : "Anthony Davis",
     "number" : 3,
     "position" : "Power Forward",
-    "uid" : ""
+    "uid" : "gk8kFU85zIfl21eFEbJFHJNoTZq2"
   },
   "-MmQvpy9lUtmGxutOy3C" : {
     "firebaseKey" : "-MmQvpy9lUtmGxutOy3C",
@@ -37,6 +37,6 @@
     "name" : "Rajon Rondo",
     "number" : 4,
     "position" : "Point Guard",
-    "uid" : ""
+    "uid" : "gk8kFU85zIfl21eFEbJFHJNoTZq2"
   }
 }

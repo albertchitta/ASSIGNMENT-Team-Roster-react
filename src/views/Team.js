@@ -12,7 +12,7 @@ const TeamStyle = styled.div`
 export default function Team({ players, setPlayers, setEditPlayer }) {
   return (
     <>
-      <h1>TEAM</h1>
+      <h1>Team Roster</h1>
       <TeamStyle>
         {players.length ? (
           players.map((player) => (

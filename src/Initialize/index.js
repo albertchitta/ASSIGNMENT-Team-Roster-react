@@ -58,13 +58,12 @@ function Initialize() {
       {user ? (
         <>
           <Navigation />
-          <h1>LOS ANGELES LAKERS</h1>
           <Routes
             players={players}
             player={editPlayer}
             setEditPlayer={setEditPlayer}
             setPlayers={setPlayers}
-            uid={firebase.auth().currentUser.uid}
+            user={user}
           />
         </>
       ) : (
