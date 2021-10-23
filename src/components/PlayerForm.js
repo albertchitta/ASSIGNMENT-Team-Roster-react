@@ -28,25 +28,33 @@ const initialState = {
   number: '',
   position: '',
   imageUrl: '',
-  uid: '',
 };
 
 export default function PlayerForm({
-  player, setPlayers, setEditPlayer, uid,
+  player,
+  setPlayers,
+  setEditPlayer,
+  user,
 }) {
   const [formInput, setFormInput] = useState(initialState);
 
   useEffect(() => {
-    if (player.firebaseKey) {
-      setFormInput({
-        name: player.name,
-        number: player.number,
-        firebaseKey: player.firebaseKey,
-        position: player.position,
-        imageUrl: player.imageUrl,
-        uid,
-      });
+    let isMounted = true;
+    if (isMounted) {
+      if (player.firebaseKey) {
+        setFormInput({
+          name: player.name,
+          number: player.number,
+          firebaseKey: player.firebaseKey,
+          position: player.position,
+          imageUrl: player.imageUrl,
+          uid: user.uid,
+        });
+      }
     }
+    return () => {
+      isMounted = false;
+    };
   }, [player]);
 
   const resetForm = () => {
@@ -69,7 +77,7 @@ export default function PlayerForm({
         resetForm();
       });
     } else {
-      createPlayer(formInput).then((players) => {
+      createPlayer({ ...formInput, uid: user.uid }).then((players) => {
         setPlayers(players);
         resetForm();
       });
@@ -153,7 +161,7 @@ export default function PlayerForm({
 PlayerForm.propTypes = {
   player: PropTypes.shape({
     name: PropTypes.string,
-    number: PropTypes.number,
+    number: PropTypes.string,
     firebaseKey: PropTypes.string,
     position: PropTypes.string,
     imageUrl: PropTypes.string,
@@ -161,7 +169,9 @@ PlayerForm.propTypes = {
   }),
   setPlayers: PropTypes.func.isRequired,
   setEditPlayer: PropTypes.func.isRequired,
-  uid: PropTypes.string.isRequired,
+  user: PropTypes.shape({
+    uid: PropTypes.string,
+  }).isRequired,
 };
 
 PlayerForm.defaultProps = { player: {} };

@@ -3,18 +3,16 @@ import PropTypes from 'prop-types';
 import PlayerForm from '../components/PlayerForm';
 
 export default function New({
-  player, setPlayers, setEditPlayer, uid,
+  player, setPlayers, setEditPlayer, user,
 }) {
-  // const [editPlayer, setEditPlayer] = useState([]);
-
   return (
     <>
-      <h1>Add A Player</h1>
+      <h1>Add a Player</h1>
       <PlayerForm
         player={player}
         setPlayers={setPlayers}
         setEditPlayer={setEditPlayer}
-        uid={uid}
+        user={user}
       />
     </>
   );
@@ -23,7 +21,7 @@ export default function New({
 New.propTypes = {
   player: PropTypes.shape({
     name: PropTypes.string,
-    number: PropTypes.number,
+    number: PropTypes.string,
     firebaseKey: PropTypes.string,
     position: PropTypes.string,
     imageUrl: PropTypes.string,
@@ -31,7 +29,9 @@ New.propTypes = {
   }),
   setPlayers: PropTypes.func.isRequired,
   setEditPlayer: PropTypes.func.isRequired,
-  uid: PropTypes.string.isRequired,
+  user: PropTypes.shape({
+    uid: PropTypes.string,
+  }).isRequired,
 };
 
 New.defaultProps = { player: {} };

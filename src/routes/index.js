@@ -10,7 +10,7 @@ export default function Routes({
   player,
   setPlayers,
   setEditPlayer,
-  uid,
+  user,
 }) {
   return (
     <div>
@@ -35,7 +35,7 @@ export default function Routes({
               player={player}
               setPlayers={setPlayers}
               setEditPlayer={setEditPlayer}
-              uid={uid}
+              user={user}
             />
           )}
         />
@@ -47,7 +47,7 @@ export default function Routes({
 Routes.propTypes = {
   player: PropTypes.shape({
     name: PropTypes.string,
-    number: PropTypes.number,
+    number: PropTypes.string,
     firebaseKey: PropTypes.string,
     position: PropTypes.string,
     imageUrl: PropTypes.string,
@@ -56,7 +56,9 @@ Routes.propTypes = {
   players: PropTypes.arrayOf(PropTypes.object).isRequired,
   setPlayers: PropTypes.func.isRequired,
   setEditPlayer: PropTypes.func.isRequired,
-  uid: PropTypes.string.isRequired,
+  user: PropTypes.shape({
+    uid: PropTypes.string,
+  }).isRequired,
 };
 
 Routes.defaultProps = { player: {} };
