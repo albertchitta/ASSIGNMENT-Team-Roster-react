@@ -4,6 +4,7 @@ import {
 } from 'reactstrap';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { useHistory } from 'react-router-dom';
 import { createPlayer, updatePlayer } from '../api/data/playerData';
 
 const FormStyle = styled.div`
@@ -12,7 +13,7 @@ const FormStyle = styled.div`
   border-width: 1px;
   padding: 16px;
   width: 644px;
-  margin: auto;
+  margin: 42px auto;
 
   Label {
     color: white;
@@ -37,6 +38,7 @@ export default function PlayerForm({
   user,
 }) {
   const [formInput, setFormInput] = useState(initialState);
+  const history = useHistory(); // Needed for routing and pushing new browser page to navigate
 
   useEffect(() => {
     let isMounted = true;
@@ -75,11 +77,13 @@ export default function PlayerForm({
       updatePlayer(formInput).then((players) => {
         setPlayers(players);
         resetForm();
+        history.push('/team');
       });
     } else {
       createPlayer({ ...formInput, uid: user.uid }).then((players) => {
         setPlayers(players);
         resetForm();
+        history.push('/team');
       });
     }
   };

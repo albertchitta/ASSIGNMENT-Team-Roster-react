@@ -15,7 +15,7 @@ const HomeStyle = styled.div`
 export default function Home() {
   return (
     <HomeStyle>
-      <h1>Lakers Nation</h1>
+      <h1>Welcome to the Los Angeles Lakers!</h1>
       <img src={logo} alt="Los Angeles Lakers Logo" />
     </HomeStyle>
   );
