@@ -1,42 +1,68 @@
 {
-  "-MmQQafjT-zgl8s7VqQa" : {
-    "firebaseKey" : "-MmQQafjT-zgl8s7VqQa",
-    "imageUrl" : "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/1966.png&w=350&h=254",
-    "name" : "Lebron James",
-    "number" : 6,
-    "position" : "Small Forward",
-    "uid" : "gk8kFU85zIfl21eFEbJFHJNoTZq2"
-  },
-  "-MmQrnn9qEp4eKani0GE" : {
-    "firebaseKey" : "-MmQrnn9qEp4eKani0GE",
-    "imageUrl" : "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3468.png&w=350&h=254",
-    "name" : "Russell Westbrook",
-    "number" : 0,
-    "position" : "Point Guard",
-    "uid" : "gk8kFU85zIfl21eFEbJFHJNoTZq2"
-  },
-  "-MmQtFbgyPBcNUkGe3_F" : {
-    "firebaseKey" : "-MmQtFbgyPBcNUkGe3_F",
-    "imageUrl" : "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/1975.png&w=350&h=254",
-    "name" : "Carmelo Anthony",
-    "number" : 7,
-    "position" : "Power Forward",
-    "uid" : "gk8kFU85zIfl21eFEbJFHJNoTZq2"
-  },
-  "-MmQu4asBTMCTHHJi5wL" : {
-    "firebaseKey" : "-MmQu4asBTMCTHHJi5wL",
-    "imageUrl" : "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6583.png&w=350&h=254",
-    "name" : "Anthony Davis",
-    "number" : 3,
-    "position" : "Power Forward",
-    "uid" : "gk8kFU85zIfl21eFEbJFHJNoTZq2"
-  },
-  "-MmQvpy9lUtmGxutOy3C" : {
-    "firebaseKey" : "-MmQvpy9lUtmGxutOy3C",
-    "imageUrl" : "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3026.png&w=350&h=254",
-    "name" : "Rajon Rondo",
-    "number" : 4,
-    "position" : "Point Guard",
-    "uid" : "gk8kFU85zIfl21eFEbJFHJNoTZq2"
+  "players" : {
+    "-MmQQafjT-zgl8s7VqQa" : {
+      "firebaseKey" : "-MmQQafjT-zgl8s7VqQa",
+      "imageUrl" : "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/1966.png&w=350&h=254",
+      "name" : "Lebron James",
+      "number" : "6",
+      "position" : "Small Forward",
+      "uid" : "gk8kFU85zIfl21eFEbJFHJNoTZq2"
+    },
+    "-MmQrnn9qEp4eKani0GE" : {
+      "firebaseKey" : "-MmQrnn9qEp4eKani0GE",
+      "imageUrl" : "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3468.png&w=350&h=254",
+      "name" : "Russell Westbrook",
+      "number" : "0",
+      "position" : "Point Guard",
+      "uid" : "gk8kFU85zIfl21eFEbJFHJNoTZq2"
+    },
+    "-MmQtFbgyPBcNUkGe3_F" : {
+      "firebaseKey" : "-MmQtFbgyPBcNUkGe3_F",
+      "imageUrl" : "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/1975.png&w=350&h=254",
+      "name" : "Carmelo Anthony",
+      "number" : "7",
+      "position" : "Power Forward",
+      "uid" : "gk8kFU85zIfl21eFEbJFHJNoTZq2"
+    },
+    "-MmQu4asBTMCTHHJi5wL" : {
+      "firebaseKey" : "-MmQu4asBTMCTHHJi5wL",
+      "imageUrl" : "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6583.png&w=350&h=254",
+      "name" : "Anthony Davis",
+      "number" : "3",
+      "position" : "Power Forward",
+      "uid" : "gk8kFU85zIfl21eFEbJFHJNoTZq2"
+    },
+    "-MmQvpy9lUtmGxutOy3C" : {
+      "firebaseKey" : "-MmQvpy9lUtmGxutOy3C",
+      "imageUrl" : "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3026.png&w=350&h=254",
+      "name" : "Rajon Rondo",
+      "number" : "4",
+      "position" : "Point Guard",
+      "uid" : "gk8kFU85zIfl21eFEbJFHJNoTZq2"
+    },
+    "-MmhxLE32xGPet99Cs2a" : {
+      "firebaseKey" : "-MmhxLE32xGPet99Cs2a",
+      "imageUrl" : "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4066457.png&w=350&h=254",
+      "name" : "Austin Reaves",
+      "number" : "15",
+      "position" : "Shooting Guard",
+      "uid" : "gk8kFU85zIfl21eFEbJFHJNoTZq2"
+    },
+    "-MmhxSb-YCdIHrG_Khbc" : {
+      "firebaseKey" : "-MmhxSb-YCdIHrG_Khbc",
+      "imageUrl" : "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4066262.png&w=350&h=254",
+      "name" : "Malik Monk",
+      "number" : "11",
+      "position" : "Shooting Guard",
+      "uid" : "gk8kFU85zIfl21eFEbJFHJNoTZq2"
+    },
+    "-Mmhxc6fgV0gJ0tNpUV8" : {
+      "firebaseKey" : "-Mmhxc6fgV0gJ0tNpUV8",
+      "imageUrl" : "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3442.png&w=350&h=254",
+      "name" : "DeAndre Jordan",
+      "number" : "10",
+      "position" : "Center",
+      "uid" : "gk8kFU85zIfl21eFEbJFHJNoTZq2"
+    }
   }
 }

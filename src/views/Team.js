@@ -7,7 +7,7 @@ const TeamStyle = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: auto;
+  margin: 42px; auto;
 `;
 export default function Team({ players, setPlayers, setEditPlayer }) {
   return (

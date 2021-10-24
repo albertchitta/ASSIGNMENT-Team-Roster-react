@@ -24,6 +24,7 @@ const PlayerStyle = styled.div`
 
     .btn {
       color: white;
+      margin-right: 8px;
     }
   }
 `;
