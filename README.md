@@ -1,6 +1,7 @@
 # Team Roster  [![Netlify Status](https://api.netlify.com/api/v1/badges/93013c80-6901-4b90-b1f9-c2a212ac5cf5/deploy-status)](https://app.netlify.com/sites/awc-team-roster/deploys)
 <!-- update the netlify badge above with your own badge that you can find at netlify under settings/general#status-badges -->
 
+![Home](https://user-images.githubusercontent.com/83558122/138630210-b0e879ba-b530-48c3-9265-bf3d39a27c07.PNG)
 A team roster application for the Los Angeles Lakers using React.
 
 [View App](https://awc-team-roster.netlify.app/)
